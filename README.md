@@ -55,6 +55,10 @@ export GROQ_API_KEY="your_groq_key"
 uwsgi --http 0.0.0.0:8000 --wsgi-file weather_app.py --callable app --processes 4 --threads 2
 ```
 
+## Postman Collection
+Import `weather_app.postman_collection.json` from this repo to test the API.
+Set your token and name in the request body before sending.
+
 ## APIs Used
 - [Visual Crossing](https://www.visualcrossing.com/) - weather data
 - [Groq / LLaMA 3.3](https://console.groq.com/) - AI UAV flight recommendations
