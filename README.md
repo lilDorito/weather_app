@@ -8,7 +8,7 @@ A Python-based Weather SaaS deployed on AWS EC2, built with Flask and uWSGI.
 
 ## Endpoints
 
-### GET Weather
+### Weather Data Endpoint
 `POST /content/api/v1/integration/generate`
 ```json
 {
@@ -19,7 +19,7 @@ A Python-based Weather SaaS deployed on AWS EC2, built with Flask and uWSGI.
 }
 ```
 
-### UAV Flight Advice (AI)
+### UAV Flight Advice Endpoint
 `POST /content/api/v1/integration/uav-advice`
 ```json
 {
@@ -35,8 +35,11 @@ A Python-based Weather SaaS deployed on AWS EC2, built with Flask and uWSGI.
 ## Setup
 
 ### Requirements
+- Python 3.8+
+- pip
+Install dependencies:
 ```bash
-pip install flask requests groq
+pip install -r requirements.txt
 ```
 
 ### Environment Variables
@@ -52,5 +55,5 @@ uwsgi --http 0.0.0.0:8000 --wsgi-file weather_app.py --callable app --processes 
 ```
 
 ## APIs Used
-- [Visual Crossing](https://www.visualcrossing.com/) — weather data
-- [Groq / LLaMA 3.3](https://console.groq.com/) — AI UAV flight recommendations
+- [Visual Crossing](https://www.visualcrossing.com/) - weather data
+- [Groq / LLaMA 3.3](https://console.groq.com/) - AI UAV flight recommendations
