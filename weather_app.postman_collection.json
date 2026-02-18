@@ -1,0 +1,78 @@
+{
+  "info": {
+    "_postman_id": "4acad6dc-6a7f-4608-b802-cb868fcb580e",
+    "name": "WeatherApp",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Weather Stats",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"token\": \"requester_token\",\n    \"requester_name\": \"demo_user\",\n    \"location\": \"Kyiv,Ukraine\",\n    \"date\": \"2026-02-18\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://13.48.26.72:8000/content/api/v1/integration/generate",
+          "protocol": "http",
+          "host": ["13", "48", "26", "72"],
+          "port": "8000",
+          "path": [
+            "content",
+            "api",
+            "v1",
+            "integration",
+            "generate"
+          ]
+        }
+      }
+    },
+    {
+      "name": "UAV Advice",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"token\": \"requester_token\",\n    \"requester_name\": \"demo_user\",\n    \"location\": \"Abuja,Nigeria\",\n    \"date\": \"2026-02-10\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://13.48.26.72:8000/content/api/v1/integration/uav-advice",
+          "protocol": "http",
+          "host": ["13", "48", "26", "72"],
+          "port": "8000",
+          "path": [
+            "content",
+            "api",
+            "v1",
+            "integration",
+            "uav-advice"
+          ]
+        }
+      }
+    }
+  ]
+}
