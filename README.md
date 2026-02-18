@@ -37,6 +37,7 @@ A Python-based Weather SaaS deployed on AWS EC2, built with Flask and uWSGI.
 ### Requirements
 - Python 3.8+
 - pip
+
 Install dependencies:
 ```bash
 pip install -r requirements.txt
